@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thực hành An toàn thông tin nâng cao</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <style>
+        body {
+            background-color: #f4f6f9;
+        }
+        .main-container {
+            margin-top: 50px;
+            margin-bottom: 50px;
+            background: #ffffff;
+            padding: 45px;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        }
+        .logo-img {
+            display: block;
+            margin: 0 auto 25px auto;
+            max-width: 260px;
+            height: auto;
+        }
+        .main-title {
+            font-weight: 800;
+            text-align: center;
+            color: #1a365d;
+            margin-bottom: 45px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            font-size: 26px;
+        }
+        .cipher-card {
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+            border: none;
+            border-radius: 12px;
+            background: #ffffff;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+        }
+        .cipher-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+        }
+        .card-title {
+            font-weight: 700;
+            color: #007bff;
+            font-size: 18px;
+        }
+        .card-text {
+            font-size: 14px;
+            color: #5a6a85;
+            min-height: 66px;
+            line-height: 1.5;
+        }
+        .btn-access {
+            font-weight: 600;
+            border-radius: 8px;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="main-container">
+            <img src="https://file1.hutech.edu.vn/file/editor/homepage/stories/hinh34/logo20CMYK-01.png" alt="HUTECH Logo" class="logo-img">
+            
+            <h4 class="main-title">Bài Thực Hành Bảo Mật Thông Tin Nâng Cao</h4>
+            
+            <div class="row justify-content-center">
+                
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 cipher-card">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Caesar Cipher</h5>
+                            <p class="card-text">Thuật toán mã hóa dịch chuyển cổ điển, thay thế mỗi ký tự bằng một ký tự khác cách nó K vị trí trong bảng chữ cái.</p>
+                            <a href="/caesar" class="btn btn-primary btn-block btn-access mt-auto">Mở chức năng</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 cipher-card">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Vigenère Cipher</h5>
+                            <p class="card-text">Mã hóa đa ký tự sử dụng một chuỗi từ khóa (Key) lặp lại để dịch chuyển các ký tự xen kẽ theo ma trận Vigenère.</p>
+                            <a href="/vigenere" class="btn btn-primary btn-block btn-access mt-auto">Mở chức năng</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 cipher-card">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Rail Fence Cipher</h5>
+                            <p class="card-text">Thuật toán mã hóa hoán vị (hàng rào) xếp các ký tự theo đường zigzag trên số hàng quy định rồi đọc nối tiếp nhau.</p>
+                            <a href="/railfence" class="btn btn-primary btn-block btn-access mt-auto">Mở chức năng</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 cipher-card">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Playfair Cipher</h5>
+                            <p class="card-text">Mã hóa thay thế đa mẫu dựa trên việc nhóm cặp ký tự đôi và xử lý tọa độ trên một ma trận khóa kích thước 5x5.</p>
+                            <a href="/playfair" class="btn btn-primary btn-block btn-access mt-auto">Mở chức năng</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 cipher-card">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Transposition Cipher</h5>
+                            <p class="card-text">Thuật toán hoán vị dòng cột, tổ chức sắp xếp lại vị trí các chữ cái trong văn bản theo một trật tự khóa số nguyên cố định.</p>
+                            <a href="/transposition" class="btn btn-primary btn-block btn-access mt-auto">Mở chức năng</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kết quả - {{ cipher_name }}</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <style>
+        .result-container {
+            margin-top: 50px;
+            max-width: 600px;
+        }
+        .card-header {
+            font-weight: bold;
+            font-size: 22px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .result-box {
+            font-size: 20px;
+            word-wrap: break-word;
+        }
+    </style>
+</head>
+<body class="bg-light">
+    <div class="container result-container">
+        <div class="card shadow-lg border-0">
+            <div class="card-header text-center text-white {% if operation == 'Encryption' %}bg-primary{% else %}bg-success{% endif %}">
+                {{ cipher_name }} - {{ operation }}
+            </div>
+            
+            <div class="card-body">
+                <div class="form-group">
+                    <label class="font-weight-bold text-secondary">Văn bản đầu vào (Input):</label>
+                    <div class="p-3 bg-white border rounded">
+                        {{ input_text }}
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="font-weight-bold text-secondary">Khóa (Key):</label>
+                    <div class="p-3 bg-white border rounded">
+                        {{ key }}
+                    </div>
+                </div>
+
+                <div class="form-group mt-4">
+                    <label class="font-weight-bold {% if operation == 'Encryption' %}text-primary{% else %}text-success{% endif %}">
+                        Kết quả (Result):
+                    </label>
+                    <div class="alert {% if operation == 'Encryption' %}alert-primary{% else %}alert-success{% endif %} result-box font-weight-bold text-center">
+                        {{ result_text }}
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card-footer bg-white text-center py-3">
+                <a href="{{ return_url }}" class="btn btn-outline-secondary px-4 mr-2">Quay lại thuật toán</a>
+                <a href="/" class="btn btn-dark px-4">Về trang chủ</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
